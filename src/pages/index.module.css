@@ -1,0 +1,325 @@
+.hero {
+  position: relative;
+  overflow: hidden;
+  padding: 5.5rem 0 4.5rem;
+  background:
+    radial-gradient(circle at 8% 10%, rgba(67, 204, 166, 0.18), transparent 34%),
+    linear-gradient(150deg, #f8fffc 0%, #eef9f5 47%, #f7f4eb 100%);
+  border-bottom: 1px solid rgba(18, 74, 63, 0.1);
+}
+
+.heroGlow {
+  position: absolute;
+  width: 28rem;
+  height: 28rem;
+  right: -12rem;
+  top: -13rem;
+  border: 1px solid rgba(19, 110, 91, 0.14);
+  border-radius: 50%;
+  box-shadow: 0 0 0 4rem rgba(19, 110, 91, 0.03), 0 0 0 8rem rgba(19, 110, 91, 0.02);
+}
+
+.heroGrid {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(32rem, 1.1fr);
+  align-items: center;
+  gap: 4rem;
+}
+
+.eyebrow,
+.kicker {
+  display: inline-block;
+  color: var(--ifm-color-primary-darkest);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.heroCopy h1 {
+  max-width: 10ch;
+  margin: 1rem 0 1.25rem;
+  color: #113c33;
+  font-family: var(--sciforge-display-font);
+  font-size: clamp(2.8rem, 5.2vw, 5.4rem);
+  line-height: 0.98;
+  letter-spacing: -0.055em;
+}
+
+.heroCopy > p {
+  max-width: 38rem;
+  color: #45615a;
+  font-size: 1.08rem;
+  line-height: 1.85;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+  margin: 2rem 0 1.6rem;
+}
+
+.trustLine {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  color: #5c746e;
+  font-size: 0.84rem;
+  font-weight: 700;
+}
+
+.trustLine span::before {
+  content: '✓';
+  margin-right: 0.38rem;
+  color: #1c8b72;
+}
+
+.heroFigure {
+  margin: 0;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.84);
+  border: 1px solid rgba(22, 88, 74, 0.14);
+  border-radius: 1.2rem;
+  box-shadow: 0 2rem 5rem rgba(24, 69, 59, 0.15);
+  transform: rotate(0.6deg);
+}
+
+.heroFigure img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  object-position: top left;
+}
+
+.heroFigure figcaption {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 1.2rem;
+  color: #59716b;
+  font-size: 0.78rem;
+}
+
+.heroFigure figcaption strong {
+  color: #173f36;
+}
+
+.section {
+  padding: 5.5rem 0;
+}
+
+.sectionLead {
+  max-width: 46rem;
+  margin-bottom: 2.2rem;
+}
+
+.sectionLead h2,
+.boundaryInner h2 {
+  margin: 0.7rem 0;
+  color: #163f36;
+  font-family: var(--sciforge-display-font);
+  font-size: clamp(2rem, 3.2vw, 3.3rem);
+  letter-spacing: -0.035em;
+}
+
+.sectionLead p {
+  margin: 0;
+  color: #64736f;
+  font-size: 1.02rem;
+}
+
+.pathGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.pathCard {
+  min-height: 18rem;
+  padding: 1.5rem;
+  color: inherit;
+  background: #fff;
+  border: 1px solid #dfe9e5;
+  border-radius: 0.85rem;
+  box-shadow: 0 0.7rem 2rem rgba(26, 63, 55, 0.05);
+  transition: transform 160ms ease, border-color 160ms ease, box-shadow 160ms ease;
+}
+
+.pathCard:hover {
+  color: inherit;
+  text-decoration: none;
+  border-color: #7bc5b2;
+  box-shadow: 0 1.1rem 2.8rem rgba(26, 85, 71, 0.1);
+  transform: translateY(-4px);
+}
+
+.pathNumber {
+  display: block;
+  margin-bottom: 3.4rem;
+  color: #65a995;
+  font-family: var(--ifm-font-family-monospace);
+  font-size: 0.82rem;
+  font-weight: 800;
+}
+
+.pathCard h3 {
+  margin-bottom: 0.8rem;
+  color: #153f35;
+  font-family: var(--sciforge-display-font);
+  font-size: 1.45rem;
+}
+
+.pathCard p {
+  color: #64736f;
+  line-height: 1.75;
+}
+
+.cardLink {
+  color: #15735f;
+  font-size: 0.88rem;
+  font-weight: 800;
+}
+
+.caseSection {
+  background: #f3f7f5;
+  border-block: 1px solid #e2ebe7;
+}
+
+.caseGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.4rem;
+}
+
+.caseCard {
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid #dce7e3;
+  border-radius: 1rem;
+  box-shadow: 0 1rem 3rem rgba(26, 65, 56, 0.07);
+}
+
+.caseCard img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  object-position: top left;
+  border-bottom: 1px solid #e0e9e6;
+}
+
+.caseBody {
+  padding: 1.5rem;
+}
+
+.caseBody h3 {
+  margin: 0.8rem 0;
+  color: #173f36;
+  font-family: var(--sciforge-display-font);
+  font-size: 1.55rem;
+}
+
+.caseBody p {
+  color: #65746f;
+  line-height: 1.75;
+}
+
+.caseBody a {
+  font-weight: 800;
+}
+
+.badge {
+  display: inline-flex;
+  padding: 0.25rem 0.55rem;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 800;
+}
+
+.badgeVerified {
+  color: #12624f;
+  background: #dff5ed;
+}
+
+.badgeExperimental {
+  color: #765612;
+  background: #fbefc9;
+}
+
+.boundarySection {
+  padding: 4rem 0;
+  color: #f5fffb;
+  background: #163f36;
+}
+
+.boundaryInner {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr auto;
+  align-items: center;
+  gap: 2rem;
+}
+
+.boundaryInner .kicker,
+.boundaryInner h2 {
+  color: #f1fff9;
+}
+
+.boundaryInner h2 {
+  margin-bottom: 0;
+  font-size: 2rem;
+}
+
+.boundaryInner p {
+  margin: 0;
+  color: #c7ddd6;
+  line-height: 1.75;
+}
+
+@media screen and (max-width: 996px) {
+  .hero {
+    padding: 4rem 0 3rem;
+  }
+
+  .heroGrid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .heroCopy h1 {
+    max-width: 13ch;
+  }
+
+  .pathGrid,
+  .caseGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .pathCard {
+    min-height: auto;
+  }
+
+  .pathNumber {
+    margin-bottom: 1.5rem;
+  }
+
+  .boundaryInner {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .heroCopy h1 {
+    font-size: 2.7rem;
+  }
+
+  .heroFigure figcaption {
+    flex-direction: column;
+  }
+
+  .section {
+    padding: 4rem 0;
+  }
+}
