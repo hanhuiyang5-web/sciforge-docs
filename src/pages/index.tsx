@@ -32,7 +32,7 @@ function ProductPreview() {
       {previews.map((item, index) => <button key={item.name} type="button" aria-pressed={active === index} aria-controls="preview-panel" onClick={() => setActive(index)}>{item.name}</button>)}
     </div>
     <div id="preview-panel" className={styles.previewPanel}>
-      <img src={prefix + previews[active].image.slice(1)} alt={`SciForge 工作台：${previews[active].name}`} fetchPriority="high" width="1600" height="1000" />
+      <img key={active} data-sf-preview title="点击或按 Enter 放大工作台截图" src={prefix + previews[active].image.slice(1)} alt={`SciForge 工作台：${previews[active].name}`} fetchPriority="high" width="1600" height="1000" />
     </div>
     <p className={styles.previewCaption}><span>0{active + 1}</span>{previews[active].caption}</p>
   </div>;

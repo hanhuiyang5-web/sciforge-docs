@@ -25,6 +25,7 @@
 .previewTabs button[aria-pressed='true'] { color: #244b34; border-color: #3a7351; font-weight: 700; }
 .previewPanel { padding: 14px 13px 0; }
 .previewPanel img { display: block; width: 100%; height: auto; aspect-ratio: 1.6; object-fit: contain; background: #fff; border: 1px solid #d5dbd1; border-radius: 3px; }
+.previewPanel img[data-sf-preview] { cursor: zoom-in; }
 .previewCaption { display: flex; gap: 12px; align-items: center; padding: 13px 17px; margin: 0; color: #52624f; font-size: 11px; line-height: 1.7; }
 .previewCaption > span { font-size: 10px; font-weight: 700; color: #879179; }
 .workflow { margin-top: 58px; padding: 22px 0; border-top: 1px solid var(--line); display: flex; align-items: center; justify-content: space-between; gap: 16px; color: var(--ink); font-size: 12px; }

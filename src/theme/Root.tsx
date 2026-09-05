@@ -2,7 +2,7 @@ import React, {useCallback, useEffect, useRef, useState} from 'react';
 import type {ReactNode} from 'react';
 
 type Preview = {src: string; alt: string; caption: string};
-const imageSelector = '.theme-doc-markdown img';
+const imageSelector = '.theme-doc-markdown img, img[data-sf-preview]';
 const dialogId = 'sf-image-preview';
 
 /** Enhance rendered guides without changing MDX content or linked images. */
@@ -33,7 +33,7 @@ function ImagePreview(): ReactNode {
       });
     };
     const open = (target: EventTarget | null) => {
-      if (!(target instanceof HTMLImageElement) || !target.matches(`${imageSelector}.sf-zoomable-image`)) return false;
+      if (!(target instanceof HTMLImageElement) || !target.matches(imageSelector) || !target.classList.contains('sf-zoomable-image')) return false;
       triggerRef.current = target;
       const sibling = target.nextElementSibling;
       const caption = sibling?.tagName === 'EM'
