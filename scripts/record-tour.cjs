@@ -235,11 +235,11 @@ async function focusImage(page, target, shot) {
   await page.evaluate(({target, title}) => {
     const overlay = document.createElement('section');
     overlay.setAttribute('data-tour-overlay', 'image');
-    overlay.style.cssText = 'position:fixed;inset:76px 24px 16px;z-index:99999;background:#f5f6f4;border:1px solid #cbd1cf;box-shadow:0 20px 70px #14251c33;border-radius:12px;padding:14px 18px 12px;display:flex;flex-direction:column;gap:10px;color:#16382c;font-family:-apple-system,BlinkMacSystemFont,"PingFang SC",sans-serif';
+    overlay.style.cssText = 'position:fixed;inset:76px 24px 16px;z-index:99999;background:#f7f9fc;border:1px solid #dbe4ef;box-shadow:0 20px 70px #0f172a33;border-radius:12px;padding:14px 18px 12px;display:flex;flex-direction:column;gap:10px;color:#17263c;font-family:-apple-system,BlinkMacSystemFont,"PingFang SC",sans-serif';
     const heading = document.createElement('div');
     heading.style.cssText = 'display:flex;justify-content:space-between;align-items:center;gap:24px;font-size:15px;flex:none';
     const strong = document.createElement('strong'); strong.textContent = title;
-    const label = document.createElement('span'); label.textContent = '文档界面截图 · 完整 SciForge 工作区'; label.style.cssText = 'font-size:12px;color:#617167';
+    const label = document.createElement('span'); label.textContent = '文档界面截图 · 完整 SciForge 工作区'; label.style.cssText = 'font-size:12px;color:#5f6f84';
     heading.append(strong, label);
     const image = document.createElement('img'); image.src = target.src; image.alt = target.alt;
     image.style.cssText = 'display:block;flex:1;min-height:0;width:100%;object-fit:contain;object-position:center;filter:none;box-shadow:none;border:none;margin:0;background:#fff';
@@ -261,10 +261,10 @@ async function renderShots(shots, fingerprint, preflight) {
   const compositor = await context.newPage();
   await compositor.setViewportSize({width, height});
   await compositor.setContent(`<!doctype html><html lang="zh-CN"><meta charset="utf-8"><style>
-    *{box-sizing:border-box}html,body{margin:0;width:${width}px;height:${height}px;overflow:hidden;background:#102e26;font-family:-apple-system,BlinkMacSystemFont,'PingFang SC',sans-serif}
+    *{box-sizing:border-box}html,body{margin:0;width:${width}px;height:${height}px;overflow:hidden;background:#102844;font-family:-apple-system,BlinkMacSystemFont,'PingFang SC',sans-serif}
     #frame{position:absolute;inset:0;display:block;width:${width}px;height:${viewportHeight}px;object-fit:cover}
-    #footer{position:absolute;top:${viewportHeight}px;left:0;right:0;bottom:0;padding:10px 42px 14px;color:#fff;background:#102e26}
-    #chapter{font-size:18px;line-height:25px;color:#92c7ae;white-space:nowrap;text-overflow:ellipsis;overflow:hidden}
+    #footer{position:absolute;top:${viewportHeight}px;left:0;right:0;bottom:0;padding:10px 42px 14px;color:#fff;background:#102844}
+    #chapter{font-size:18px;line-height:25px;color:#abd5ff;white-space:nowrap;text-overflow:ellipsis;overflow:hidden}
     #subtitle{font-size:28px;line-height:35px;position:absolute;bottom:14px;left:65px;right:65px;text-align:center;white-space:pre-line;margin:0}
   </style><body><img id="frame" alt="文档页面"><footer id="footer"><div id="chapter"></div><p id="subtitle"></p></footer></body></html>`);
   page.setDefaultTimeout(20000);

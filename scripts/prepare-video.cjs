@@ -1,5 +1,6 @@
 const fs = require('node:fs');
 const path = require('node:path');
+const {createHash} = require('node:crypto');
 const root = path.resolve(__dirname, '..');
 const plan = require('./tour-plan.cjs');
 const source = path.join(root, 'recordings');
@@ -20,5 +21,6 @@ fs.writeFileSync(transcriptPath,fs.readFileSync(transcriptPath,'utf8').trimEnd()
 const srt = fs.readFileSync(path.join(destination,'captions.srt'),'utf8');
 fs.writeFileSync(path.join(destination,'captions.vtt'),'WEBVTT\n\n'+srt.replace(/(\d{2}:\d{2}:\d{2}),(\d{3})/g,'$1.$2'));
 const chapters = manifest.chapters.map(({title,start,route}) => ({title,start,route}));
-fs.writeFileSync(path.join(root,'src/data/tour.json'),JSON.stringify({ready:true,duration:manifest.duration,chapters},null,2)+'\n');
+const revision = createHash('sha256').update(fs.readFileSync(path.join(source,`${plan.slug}.mp4`))).digest('hex').slice(0,12);
+fs.writeFileSync(path.join(root,'src/data/tour.json'),JSON.stringify({ready:true,revision,duration:manifest.duration,chapters},null,2)+'\n');
 console.log(`Prepared ${chapters.length} chapters and ${(manifest.bytes/1024/1024).toFixed(1)} MiB video for /guide`);

@@ -1,20 +1,28 @@
-/* SciForge field guide: warm paper, precise rules, generous reading space. */
+/* SciForge blue: derived from the app accent, with contrast-safe reading colors. */
 :root {
-  --sf-surface: #f6f5f0;
-  --sf-paper: #fffefb;
-  --sf-ink: #192b27;
-  --sf-muted: #69766f;
-  --sf-line: #dce1d7;
-  --sf-accent: #246b50;
-  --sf-highlight: #dae7aa;
-  --sf-tint: #edf1e7;
-  --ifm-color-primary: #246b50;
-  --ifm-color-primary-dark: #206048;
-  --ifm-color-primary-darker: #1f5b44;
-  --ifm-color-primary-darkest: #194b38;
-  --ifm-color-primary-light: #287658;
-  --ifm-color-primary-lighter: #297b5c;
-  --ifm-color-primary-lightest: #2f8b68;
+  --sf-brand: #0088ff;
+  --sf-on-accent: #ffffff;
+  --sf-inverse-bg: #102844;
+  --sf-inverse-text: #eff6ff;
+  --sf-inverse-muted: #b4c8e2;
+  --sf-inverse-border: #294769;
+  --sf-inverse-accent: #abd5ff;
+  --sf-shadow-rgb: 15 23 42;
+  --sf-surface: #f7f9fc;
+  --sf-paper: #ffffff;
+  --sf-ink: #17263c;
+  --sf-muted: #5f6f84;
+  --sf-line: #dbe4ef;
+  --sf-accent: #0069cc;
+  --sf-highlight: #d5eaff;
+  --sf-tint: #edf5ff;
+  --ifm-color-primary: #0069cc;
+  --ifm-color-primary-dark: #005eb8;
+  --ifm-color-primary-darker: #0059ad;
+  --ifm-color-primary-darkest: #004a8f;
+  --ifm-color-primary-light: #0074e0;
+  --ifm-color-primary-lighter: #0079eb;
+  --ifm-color-primary-lightest: #0f8aff;
   --ifm-background-color: var(--sf-surface);
   --ifm-background-surface-color: var(--sf-paper);
   --ifm-font-color-base: var(--sf-ink);
@@ -31,7 +39,7 @@
   --ifm-navbar-background-color: var(--sf-surface);
   --ifm-navbar-link-color: var(--sf-ink);
   --ifm-global-radius: 6px;
-  --ifm-global-shadow-lw: 0 2px 12px rgb(25 43 39 / 4%);
+  --ifm-global-shadow-lw: 0 2px 12px rgb(15 23 42 / 4%);
   --ifm-menu-color: var(--sf-muted);
   --ifm-menu-color-active: var(--sf-accent);
   --ifm-menu-color-background-active: var(--sf-tint);
@@ -45,34 +53,36 @@
   --ifm-link-hover-color: var(--sf-ink);
   --ifm-table-border-color: var(--sf-line);
   --ifm-table-head-background: var(--sf-tint);
-  --ifm-table-stripe-background: rgb(25 43 39 / 2%);
+  --ifm-table-stripe-background: rgb(15 23 42 / 2%);
   --doc-sidebar-width: 280px;
-  --docusaurus-highlighted-code-line-bg: rgb(36 107 80 / 9%);
+  --docusaurus-highlighted-code-line-bg: rgb(0 136 255 / 9%);
 }
 
 [data-theme='dark'] {
-  --sf-surface: #151f1b;
-  --sf-paper: #1d2923;
-  --sf-ink: #edf2e7;
-  --sf-muted: #a1afa5;
-  --sf-line: #35433b;
-  --sf-accent: #a7cc8e;
-  --sf-highlight: #c7dca0;
-  --sf-tint: #283a2e;
-  --ifm-color-primary: #a7cc8e;
-  --ifm-color-primary-dark: #94c075;
-  --ifm-color-primary-darker: #8bba68;
-  --ifm-color-primary-darkest: #70a448;
-  --ifm-color-primary-light: #bad8a7;
-  --ifm-color-primary-lighter: #c3deb4;
-  --ifm-color-primary-lightest: #e0efd9;
+  --sf-brand: #339cff;
+  --sf-on-accent: #102640;
+  --sf-surface: #0f1724;
+  --sf-paper: #172334;
+  --sf-ink: #edf4ff;
+  --sf-muted: #a3b3c8;
+  --sf-line: #2a3b51;
+  --sf-accent: #67b3ff;
+  --sf-highlight: #b8ddff;
+  --sf-tint: #1b3049;
+  --ifm-color-primary: #67b3ff;
+  --ifm-color-primary-dark: #45a2ff;
+  --ifm-color-primary-darker: #349aff;
+  --ifm-color-primary-darkest: #0b85ff;
+  --ifm-color-primary-light: #89c4ff;
+  --ifm-color-primary-lighter: #9acdff;
+  --ifm-color-primary-lightest: #cde6ff;
   --ifm-table-stripe-background: rgb(255 255 255 / 2%);
-  --docusaurus-highlighted-code-line-bg: rgb(167 204 142 / 12%);
+  --docusaurus-highlighted-code-line-bg: rgb(51 156 255 / 12%);
 }
 
 html { scroll-behavior: smooth; scroll-padding-top: calc(var(--ifm-navbar-height) + 24px); }
 body { letter-spacing: 0.005em; -webkit-font-smoothing: antialiased; }
-::selection { color: #192b27; background: #dae7aa; }
+::selection { color: #17263c; background: var(--sf-highlight); }
 :focus-visible { outline: 2px solid var(--sf-accent); outline-offset: 4px; }
 
 .navbar { border-bottom: 1px solid var(--sf-line); box-shadow: none; padding-inline: clamp(20px, 3vw, 48px); }
@@ -118,9 +128,9 @@ body { letter-spacing: 0.005em; -webkit-font-smoothing: antialiased; }
 .theme-doc-markdown blockquote { border-left: 3px solid var(--sf-accent); border-radius: 0 5px 5px 0; background: var(--sf-tint); color: var(--sf-ink); margin: 28px 0; padding: 22px 27px; font-size: 17px; }
 .theme-doc-markdown blockquote p:last-child { margin-bottom: 0; }
 
-.theme-doc-markdown img { display: block; height: auto; width: auto; max-width: 100%; margin: 34px auto 13px; border: 1px solid var(--sf-line); border-radius: 8px; background: var(--sf-paper); box-shadow: 0 10px 28px rgb(25 43 39 / 7%); }
+.theme-doc-markdown img { display: block; height: auto; width: auto; max-width: 100%; margin: 34px auto 13px; border: 1px solid var(--sf-line); border-radius: 8px; background: var(--sf-paper); box-shadow: 0 10px 28px rgb(15 23 42 / 7%); }
 .theme-doc-markdown img.sf-zoomable-image { cursor: zoom-in; transition: border-color 160ms ease, box-shadow 160ms ease; }
-.theme-doc-markdown img.sf-zoomable-image:hover { border-color: var(--sf-accent); box-shadow: 0 12px 32px rgb(25 43 39 / 12%); }
+.theme-doc-markdown img.sf-zoomable-image:hover { border-color: var(--sf-accent); box-shadow: 0 12px 32px rgb(15 23 42 / 12%); }
 .theme-doc-markdown p:has(> img.sf-zoomable-image)::after { content: '点击图片，放大查看 ↗'; display: block; margin-top: 7px; color: var(--sf-accent); font-size: 12px; text-align: right; letter-spacing: 0.025em; }
 .theme-doc-markdown img + em, .theme-doc-markdown figcaption { display: block; margin: 10px 0 4px; padding-left: 12px; border-left: 2px solid var(--sf-line); color: var(--sf-muted); font-size: 13px; font-style: normal; line-height: 1.8; }
 
@@ -153,14 +163,14 @@ body { letter-spacing: 0.005em; -webkit-font-smoothing: antialiased; }
 .pagination-nav__label { color: var(--sf-ink); font-size: 15px; font-weight: 650; }
 .button { border-radius: 5px; font-weight: 650; }
 
-.footer--dark { --ifm-footer-background-color: #192b27; --ifm-footer-color: #bac8bd; --ifm-footer-title-color: #e9eee2; --ifm-footer-link-color: #bac8bd; border-top: 1px solid #354a40; padding: 55px 0 35px; font-size: 14px; }
+.footer--dark { --ifm-footer-background-color: var(--sf-inverse-bg); --ifm-footer-color: #b4c8e2; --ifm-footer-title-color: #eff6ff; --ifm-footer-link-color: #b4c8e2; border-top: 1px solid #294769; padding: 55px 0 35px; font-size: 14px; }
 .footer__title { margin-bottom: 18px; font-size: 13px; }
 .footer__item { margin-bottom: 7px; }
-.footer__copyright { border-top: 1px solid #354a40; margin-top: 34px; padding-top: 22px; font-size: 12px; letter-spacing: 0.015em; }
+.footer__copyright { border-top: 1px solid #294769; margin-top: 34px; padding-top: 22px; font-size: 12px; letter-spacing: 0.015em; }
 
 /* Native dialog keeps image inspection keyboard-accessible and self-contained. */
 .sf-image-dialog { width: calc(100vw - 48px); height: calc(100dvh - 48px); max-width: 1920px; max-height: calc(100dvh - 48px); margin: auto; padding: 0; overflow: hidden; border: 1px solid var(--sf-line); border-radius: 10px; background: var(--sf-surface); color: var(--sf-ink); box-shadow: 0 25px 80px rgb(0 0 0 / 30%); }
-.sf-image-dialog::backdrop { background: rgb(11 21 16 / 80%); backdrop-filter: blur(4px); }
+.sf-image-dialog::backdrop { background: rgb(10 20 36 / 80%); backdrop-filter: blur(4px); }
 .sf-image-dialog[open] { display: flex; flex-direction: column; }
 .sf-image-dialog__toolbar { flex-shrink: 0; display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 68px; border-bottom: 1px solid var(--sf-line); padding: 14px 22px; }
 .sf-image-dialog__heading { display: flex; align-items: center; gap: 12px; min-width: 0; font-size: 14px; line-height: 1.6; }
