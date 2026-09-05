@@ -59,16 +59,8 @@ const config: Config = {
       defaultMode: 'light',
       respectPrefersColorScheme: true,
     },
-    announcementBar: {
-      id: 'source_verified',
-      content:
-        '文档内容以 SciForge 当前源码与真实界面为准；实验性能力会明确标注。',
-      backgroundColor: '#e7f7f2',
-      textColor: '#153b34',
-      isCloseable: true,
-    },
     navbar: {
-      title: 'SciForge Docs',
+      title: 'SciForge / 使用手册',
       logo: {
         alt: 'SciForge',
         src: 'img/brand/sciforge-icon.svg',
@@ -81,15 +73,21 @@ const config: Config = {
           label: '使用文档',
         },
         {
-          to: '/docs/category/端到端案例',
-          label: '案例',
+          to: '/docs/cases/overview',
+          label: '案例教程',
           position: 'left',
         },
         {
-          to: '/docs/category/功能与扩展',
-          label: '功能与扩展',
+          to: '/docs/features/overview',
+          label: '功能手册',
           position: 'left',
         },
+        {
+          to: '/guide',
+          label: '视频导览',
+          position: 'left',
+        },
+        {type: 'custom-docSearch', position: 'right'},
         {
           href: 'https://github.com/hanhuiyang5-web/sciforge-docs',
           label: 'GitHub',

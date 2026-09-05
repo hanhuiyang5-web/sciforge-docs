@@ -31,6 +31,7 @@ sidebar_position: 2
 - 确认当前使用模型 API 还是 Coding Plan。
 - 模型 API 需要 Base URL、API Key 和模型名称完整匹配。
 - Coding Plan 需要有效的官方登录状态。
+- 当前 Coding Plan 路径支持 Codex；选择 Claude Code 时应配置模型 API。
 - 不要把 Provider API Key 填到 Runtime 登录位置。
 - 先用不读取文件的最小提示词测试，再排查工具和沙箱。
 
@@ -39,8 +40,9 @@ sidebar_position: 2
 1. 立即停止任务。
 2. 比较任务前后的 `git status --short`。
 3. 打开 **变更** 面板核对文件。
-4. 检查测试、解释器或工具是否生成缓存。
-5. 不要自动删除任务前已经存在的用户改动。
+4. 确认执行者、设置是否已应用，以及是否批准了扩大权限；Claude Plan 模式不等于 Codex 只读沙箱。
+5. 检查测试、解释器、MCP、远程工具或 Computer Use 是否进行了写入。被 Git 忽略的文件需要另外核对。
+6. 不要自动删除任务前已经存在的用户改动。
 
 ## 科学文件没有被理解
 

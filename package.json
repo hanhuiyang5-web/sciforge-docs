@@ -3,6 +3,11 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
+    "prebuild": "node scripts/build-search.cjs",
+    "prestart": "node scripts/build-search.cjs",
+    "video:record": "node scripts/record-tour.cjs",
+    "video:prepare": "node scripts/prepare-video.cjs",
+    "preview": "node scripts/preview.cjs",
     "docusaurus": "docusaurus",
     "start": "docusaurus start",
     "build": "docusaurus build",

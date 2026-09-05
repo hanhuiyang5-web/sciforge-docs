@@ -1,0 +1,19 @@
+.trigger { display:flex;align-items:center;gap:10px;background:var(--sf-surface,#f6f5f0);color:var(--sf-muted,#69766f);border:1px solid var(--sf-line,#dce1d7);border-radius:5px;padding:8px 10px;min-width:178px;font:inherit;font-size:12px;cursor:pointer;margin-inline:14px; }
+.trigger kbd { margin-left:auto;font-size:10px;border:0;box-shadow:none;color:var(--sf-muted);background:transparent;padding:0; }
+.dialog { position:fixed;inset:10vh 0 auto;width:min(680px,calc(100vw - 28px));max-height:80vh;padding:0;border:1px solid var(--sf-line);border-radius:12px;background:var(--sf-paper,#fffefb);color:var(--sf-ink,#192b27);box-shadow:0 30px 90px #10261e40;overflow:hidden; }
+.dialog::backdrop { background:#0b211961;backdrop-filter:blur(4px); }
+.top { padding:20px 22px 12px;display:flex;justify-content:space-between;align-items:center;font-size:13px;font-weight:600; }
+.top button { padding:4px 8px;background:var(--sf-surface);border:1px solid var(--sf-line);color:var(--sf-muted);border-radius:4px;font-size:11px;cursor:pointer; }
+.input { display:block;box-sizing:border-box;width:calc(100% - 44px);margin-inline:22px;padding:14px;border:1px solid var(--sf-line);border-radius:5px;background:var(--sf-surface);color:var(--sf-ink);font:inherit;font-size:16px; }
+.input:focus { outline:2px solid var(--sf-accent);outline-offset:1px; }
+.count { margin:15px 22px 8px;color:var(--sf-muted);font-size:11px; }
+.results { max-height:calc(80vh - 200px);overflow:auto;padding:0 12px 12px; }
+.result { display:block;border-radius:5px;padding:13px 11px;color:var(--sf-ink); }
+.result:hover,.result:focus-visible { background:var(--sf-surface);color:var(--sf-accent);text-decoration:none; }
+.result>span { color:var(--sf-muted);font-size:10px; }
+.result strong { display:flex;align-items:center;justify-content:space-between;font-size:15px;margin:3px 0 6px;font-weight:650; }
+.result b { font-weight:400; }
+.result p { color:var(--sf-muted);font-size:12px;line-height:1.7;margin:0; }
+.empty { padding:32px 11px;color:var(--sf-muted);font-size:14px; }.empty p { font-size:12px;margin-top:10px; }
+.bottom { padding:12px 22px;border-top:1px solid var(--sf-line);color:var(--sf-muted);font-size:10px; }
+@media(max-width:996px) { .trigger { min-width:0;width:32px;height:32px;padding:8px;margin:0 7px; }.trigger span,.trigger kbd { display:none; }.dialog { inset:6vh 0 auto;max-height:88vh; }.results { max-height:calc(88vh - 200px); } }

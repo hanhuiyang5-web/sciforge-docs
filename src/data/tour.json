@@ -1,0 +1,51 @@
+{
+  "ready": true,
+  "duration": 405.067,
+  "chapters": [
+    {
+      "title": "从科研任务开始",
+      "start": 0,
+      "route": "/"
+    },
+    {
+      "title": "完成第一次安全任务",
+      "start": 45.53333333333333,
+      "route": "/docs/getting-started/runtime-and-models"
+    },
+    {
+      "title": "案例一 · 跨尺度证据审查",
+      "start": 109.99999999999999,
+      "route": "/docs/cases/virtual-cell-evidence-atlas"
+    },
+    {
+      "title": "案例二 · 外部模型预测评测",
+      "start": 196.73333333333335,
+      "route": "/docs/cases/virtual-cell-benchmark"
+    },
+    {
+      "title": "理解工作台与 Agent 协作",
+      "start": 261.53333333333336,
+      "route": "/docs/workbench/workspaces-and-sessions"
+    },
+    {
+      "title": "组织证据与可复现记录",
+      "start": 292.06666666666666,
+      "route": "/docs/features/evidence-and-reproducibility"
+    },
+    {
+      "title": "安排重复任务与多步流程",
+      "start": 312.1333333333333,
+      "route": "/docs/features/automation"
+    },
+    {
+      "title": "扩展能力与连接远程资源",
+      "start": 330.6666666666667,
+      "route": "/docs/features/extensions"
+    },
+    {
+      "title": "安全、排障与下一步",
+      "start": 374.2666666666667,
+      "route": "/docs/operations/security"
+    }
+  ]
+}
